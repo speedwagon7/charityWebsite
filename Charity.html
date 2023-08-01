@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="charity.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Charity Website Wireframe</title>
+    <!--JavaScript with dark/light mode-->
+    <script>
+        function lowerOpacity() {
+            document.getElementById("logo1").style.opacity = 0.5;
+        }
+        function darkMode() {
+            if(document.getElementById("light-dark-mode").textContent == "Light Mode" ){
+                lightMode()
+                return;
+
+            }
+            document.getElementById("light-dark-mode").textContent = "Light Mode";
+
+            document.getElementById("pageContainer").style.background = "grey";
+            document.body.style.backgroundColor = "black";
+            document.getElementById("navigation-container").style.background = "#F5F5DC";
+            document.getElementById("latest-news-container").style.background = "#F5F5DC";
+            document.getElementById("last-container").style.background = "#F5F5DC";
+            document.getElementById("special-care-container").style.background = "#F5F5DC";
+            
+            var containers = document.getElementsByClassName("secondary-content-container");
+            for (var i=0; i < containers.length; i++) {
+                containers[i].style.background = "#F5F5DC";
+            }            
+        }
+        function lightMode() {
+            document.getElementById("light-dark-mode").textContent = "Dark Mode";
+            document.getElementById("pageContainer").style.background = "white";
+            document.body.style.backgroundColor = "grey";
+            document.getElementById("navigation-container").style.background = "#e9eff1";
+            document.getElementById("latest-news-container").style.background = "#e9eff1";
+            document.getElementById("last-container").style.background = "#e9eff1";
+            document.getElementById("special-care-container").style.background = "#e9eff1";
+            
+            var containers = document.getElementsByClassName("secondary-content-container");
+            for (var i=0; i < containers.length; i++) {
+                containers[i].style.background = "#e9eff1";
+            }            
+        }
+    </script>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <div>
+            <header>
+                <h1 id="pageTitle">Charity Website - Wireframe</h1>
+            </header>
+        </div>
+        <!--Top third -->
+        <div id="top-container">
+            <div id="navigation-container">
+                <div id="top-logo" >
+                    <img onclick="lowerOpacity(this)" id="logo1" src="https://picsum.photos/id/80/300/100" />
+                    <div class="centered">Logo</div>
+                    <button id="light-dark-mode" onclick="darkMode()" value=""> dark mode</button>
+                </div>
+                <div id="searchbar">
+                    <form >
+                    <div id="top-form">        
+                            <input  id="textbox"  type="text" placeholder=" Search...." name="search"> 
+                            <button id="submitbox" type="submit">Search</button>  
+                            <button id="loginbox" type="submit">Login/Register</button>
+                            
+                    </div>
+                        
+                    </form>  
+                </div>
+                <div>
+
+                </div>
+                <div id="nav">
+                    <nav>
+                        <div id="home">
+                            <a href="#">
+                                <h2>Home</h2>
+                            </a>
+                        </div>
+                        <div id="what-we-do">
+                            <a href="#">
+                                <h2>What We Do</h2>
+                            </a>
+                        </div>
+                        <div id="get-involved">
+                            <a href="#">
+                                <h2>Get Involved</h2>
+                            </a>
+                        </div>
+                        <div id="adopt">
+                            <a href="#">
+                                <h2>Adopt</h2>
+                            </a>
+                        </div>
+                        <div id="shop">
+                            <a href="#">
+                                <h2>Shop</h2>
+                            </a>
+                        </div>
+                        <div id="donate">
+                            <a href="#">
+                                <h2>Donate</h2>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+            
+            <div id="large-image-container">
+                <img id="large-image" src="https://picsum.photos/id/10/1250/500" alt="">
+                <div class="centered"><bold> Save the donkeys! </bold> <br> <u> Help us </u></div>
+            </div>
+        </div>
+        <!--bottom two thirds -->
+        <div id="bottom-two-thirds">
+            <div id="header1">
+                <h1>How You Can Help</h1>
+            </div>
+            <div id="first-row">
+                <div>
+                    <img id="left-image" src="https://picsum.photos/id/10/500/300" alt="">
+                </div>
+                <div id="special-care-container">
+                    <a href="#">
+                        <img id="logo" src="https://picsum.photos/id/1/80/80" />
+                        <h1 class="headline"> Special Care</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        <button>Donate</button>
+                    </a>
+                </div>
+            </div>
+            <div id="secondary-content-row">
+                <div class="secondary-content-container">
+                    <a href="#">
+                        <img id="logo" src="https://picsum.photos/id/1/80/80" />
+                        <h3 class="headline">Visit</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                        <button>Visit Us</button>
+                    </a>
+                </div>
+                <div class="secondary-content-container">
+                    <a href="#">
+                        <img id="logo" src="https://picsum.photos/id/1/80/80" />
+                        <h3 class="headline">Shop</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                        <button>Shop Now</button>
+                    </a>
+                </div>
+                <div class="secondary-content-container">
+                    <a href="#">
+                        <img id="logo" src="https://picsum.photos/id/1/80/80" />
+                        <h3 class="headline">Adopt</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                        <button>Find Out More</button>
+                    </a>
+                </div>
+            </div>
+            <div id="third-content-row">
+                <div id="latest-news-container">
+                    <a href="#">
+                        <h4 class="headline">Latest News</h4>
+                        <p class="article"> <u> ipsum, dolor sit amet consectetur adipisicing elit.</u>  </p>
+                        <p>6th April 2019 </p>
+                        <p class="article"> <u> Sed ultrices blandit erat sed. </u> </p>
+                        <p>2nd April 2019 </p>
+                        <p class="article"> <u> Condimentum congue. Morbi eu purus id </u> </p>
+                        <p>28th March 2019 </p>
+
+                    </a>
+                </div>
+                <div id="last-container">
+                    <div>
+                        <h5 class="headline">Get Email Updates</h4>
+                    </div>
+                    <div id="subscribe-div">
+                        <form action="#">
+                            <div class="form-div">
+                                <input type="text" placeholder="Email Address">
+                            </div>
+                            <div class="form-div">
+                                <input type="text" placeholder="First Name">
+                            </div>
+                            <div class="form-div">
+                                <input type="text" placeholder="Last Name">
+                            </div>
+                            <div>
+                                <input class="submit-div" type="submit" value="Subscribe">
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+                    
+                
+            </div>
+        </div>
+</body>
+
+</html>
